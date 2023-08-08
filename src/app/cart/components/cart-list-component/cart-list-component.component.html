@@ -1,0 +1,12 @@
+<div class="cart">
+  <ng-container *ngIf="(cart$ | async) as cart">
+    <p class="cart-title">Cart</p>
+    <div *ngIf="cart.length; else emptyCart">
+      <p *ngFor="let item of cart" class="cart-item">{{ item }}</p>
+    </div>
+  </ng-container>
+</div>
+
+<ng-template #emptyCart>
+  Your cart is empty
+</ng-template>

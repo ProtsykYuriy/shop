@@ -1,0 +1,16 @@
+<p>first-component works!</p>
+<div>
+  <div>
+    <p>{{ name }}</p>
+    <p>{{ description }}</p>
+    <p>{{ price }}</p>
+    <p>{{ category }}</p>
+    <p>{{ isAvailable }}</p>
+  </div>
+  <div>
+    <p *ngFor="let type of types">{{ type }}</p>
+  </div>
+  <div>
+    <p *ngFor="let originCounry of originCounries">{{ originCounry }}</p>
+  </div>
+</div>
