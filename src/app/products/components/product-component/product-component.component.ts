@@ -13,7 +13,9 @@ export class ProductComponentComponent {
 
   constructor(private readonly cartService: CartService) {}
 
-  public onAddToCart(): void {
+  onAddToCart(): void {
+    // subscribe - это подписка на поток, в данном случае на поток cart$.
+    // если есть подписка, то надо добавить отписку, чтобы не было утечки памяти
     this.cartService.cart$.pipe(take(1)).subscribe((cart) => {
       this.cartService.cart$.next([...cart, this.product.name]);
     });

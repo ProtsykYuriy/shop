@@ -10,6 +10,7 @@ import { CartListComponentComponent } from './cart/components/cart-list-componen
 @NgModule({
   declarations: [
     AppComponent,
+    // лишний суффикс Component в названии компонента - убираем
     FirstComponentComponent,
     ProductComponentComponent,
     ProductListComponentComponent,
