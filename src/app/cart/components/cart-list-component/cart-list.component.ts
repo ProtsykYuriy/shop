@@ -3,11 +3,11 @@ import { CartService } from '../../services/cart.service';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-  selector: 'app-cart-list-component',
-  templateUrl: './cart-list-component.component.html',
-  styleUrls: ['./cart-list-component.component.scss'],
+  selector: 'app-cart-list',
+  templateUrl: './cart-list.component.html',
+  styleUrls: ['./cart-list.component.scss'],
 })
-export class CartListComponentComponent implements OnInit {
+export class CartListComponent implements OnInit {
   cart$!: BehaviorSubject<string[]>;
 
   constructor(private readonly cartService: CartService) {}

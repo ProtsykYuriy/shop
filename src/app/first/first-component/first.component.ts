@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { ProductCategory } from '../../shared/enums/product-category.enum';
 
 @Component({
-  selector: 'app-first-component',
-  templateUrl: './first-component.component.html',
-  styleUrls: ['./first-component.component.scss']
+  selector: 'app-first',
+  templateUrl: './first.component.html',
 })
-export class FirstComponentComponent {
+export class FirstComponent {
   name!: string;
   description!: string;
   price!: number;

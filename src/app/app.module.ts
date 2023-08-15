@@ -2,18 +2,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { FirstComponentComponent } from './first/first-component/first-component.component';
-import { ProductComponentComponent } from './products/components/product-component/product-component.component';
-import { ProductListComponentComponent } from './products/components/product-list-component/product-list-component.component';
-import { CartListComponentComponent } from './cart/components/cart-list-component/cart-list-component.component';
+import { FirstComponent} from './first/first-component/first.component';
+import { ProductComponent } from './products/components/product-component/product.component';
+import { ProductListComponent } from './products/components/product-list-component/product-list.component';
+import { CartListComponent } from './cart/components/cart-list-component/cart-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponentComponent,
-    ProductComponentComponent,
-    ProductListComponentComponent,
-    CartListComponentComponent
+    FirstComponent,
+    ProductComponent,
+    ProductListComponent,
+    CartListComponent
   ],
   imports: [
     BrowserModule

@@ -4,11 +4,10 @@ import { CartService } from '../../../cart/services/cart.service';
 import { take } from 'rxjs';
 
 @Component({
-  selector: 'app-product-component',
-  templateUrl: './product-component.component.html',
-  styleUrls: ['./product-component.component.scss'],
+  selector: 'app-product',
+  templateUrl: './product.component.html',
 })
-export class ProductComponentComponent {
+export class ProductComponent {
   @Input() product!: ProductModel;
 
   constructor(private readonly cartService: CartService) {}
