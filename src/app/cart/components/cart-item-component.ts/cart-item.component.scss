@@ -1,0 +1,19 @@
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px black;
+    padding: 0 10px;
+}
+
+.delete-button {
+    height: 30px;
+}
+
+.cart-item-quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+    width: 70px;
+}

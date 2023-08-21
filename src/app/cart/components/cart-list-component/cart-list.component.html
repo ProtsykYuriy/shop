@@ -1,12 +1,18 @@
 <div class="cart">
-  <ng-container *ngIf="(cart$ | async) as cart">
-    <p class="cart-title">Cart</p>
-    <div *ngIf="cart.length; else emptyCart">
-      <p *ngFor="let item of cart" class="cart-item">{{ item }}</p>
+  <p class="cart-title">Cart</p>
+  <div *ngIf="totalQuantity$ | async as totalQuantity; else emptyCart">
+    <div *ngFor="let item of cart$ | async" class="cart-item">
+      <app-cart-item
+        [cartItem]="item"
+        (addItem)="addItem($event)"
+        (substractItem)="substractItem($event)"
+        (removeItem)="removeItem($event)"
+      >
+      </app-cart-item>
     </div>
-  </ng-container>
+    <p class="cart-item">TotalCost: {{ totalCost$ | async }}$</p>
+    <p class="cart-item">TotalQuantity: {{ totalQuantity }}</p>
+  </div>
 </div>
 
-<ng-template #emptyCart>
-  Your cart is empty
-</ng-template>
+<ng-template #emptyCart> Your cart is empty </ng-template>

@@ -2,21 +2,23 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { FirstComponent} from './first/first-component/first.component';
-import { ProductComponent } from './products/components/product-component/product.component';
-import { ProductListComponent } from './products/components/product-list-component/product-list.component';
-import { CartListComponent } from './cart/components/cart-list-component/cart-list.component';
+import { CartModule } from './cart/cart.module';
+import { ProductsModule } from './products/products.module';
+import { OrdersModule } from './orders/orders.module';
+import { SharedModule } from './shared/shared.module';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponent,
-    ProductComponent,
-    ProductListComponent,
-    CartListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CartModule,
+    ProductsModule,
+    OrdersModule,
+    SharedModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
