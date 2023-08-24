@@ -11,7 +11,8 @@ export class CartService {
   totalCost$ = new BehaviorSubject<number>(0);
   totalQuantity$ = new BehaviorSubject<number>(0);
 
-  public addProductToCart(product: ProductModel | CartItem) {
+  addProductToCart(product: ProductModel | CartItem) {
+    // в чем суть этого объединения?
     combineLatest([this.cart$, this.totalCost$, this.totalQuantity$])
       .pipe(take(1))
       .subscribe(([cart, totalCost, totalQuantity]) => {
@@ -21,7 +22,7 @@ export class CartService {
       });
   }
 
-  public substractProductFromCart(product: ProductModel | CartItem) {
+  substractProductFromCart(product: ProductModel | CartItem) {
     combineLatest([this.cart$, this.totalCost$, this.totalQuantity$])
       .pipe(take(1))
       .subscribe(([cart, totalCost, totalQuantity]) => {
@@ -31,7 +32,7 @@ export class CartService {
       });
   }
 
-  public removeSimilarProducts(product: CartItem) {
+  removeSimilarProducts(product: CartItem) {
     combineLatest([this.cart$, this.totalCost$, this.totalQuantity$])
       .pipe(take(1))
       .subscribe(([cart, totalCost, totalQuantity]) => {
