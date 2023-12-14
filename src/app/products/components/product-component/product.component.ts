@@ -6,6 +6,7 @@ import { ProductModel } from '../../interfaces/product-model';
   selector: 'app-product',
   templateUrl: './product.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
 })
 export class ProductComponent {
   @Input() product!: ProductModel;
