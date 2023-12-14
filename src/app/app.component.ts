@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import {
   AfterViewInit,
   Component,
@@ -14,7 +13,7 @@ import { ProductListComponent } from './products/components/product-list-compone
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, CartListComponent, ProductListComponent]
+  imports: [CartListComponent, ProductListComponent]
 })
 export class AppComponent implements AfterViewInit {
   title = 'My awasome shop';
