@@ -2,6 +2,7 @@ import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]',
+  standalone: true,
 })
 export class HighlightDirective {
   color = 'yellow';
